@@ -570,4 +570,20 @@ const surah = [
     "link": "src/no/114.html"
   }
 ]
-  
+const katagori = [...new Set(surah.map((item => {
+      return item;
+   })))];
+   let i=0;
+//load data produk ke sistem
+const page = document.querySelector('.list');
+page.innerHTML = katagori.map((item => {
+   var {name, link} = item;
+   
+   return(
+      `
+      <div class="sub-list">
+       <a href="${link}"> <h6>${name}</h6></a>
+      </div>
+      `
+      )
+})).join('')

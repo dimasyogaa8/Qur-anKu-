@@ -3,6 +3,10 @@ const sun = document.querySelector('.sun');
 const moon = document.querySelector('.moon');
 const title = document.getElementById('sub-title');
 const nav = document.querySelector('.navbar');
+const eye = document.querySelector('.eye');
+eye.addEventListener('click', ()=>{
+  nav.classList.toggle('eyes');
+});
 
 //btn dark mode 
 // jika menambah kan btn atau objek lain harap di update darkmode css nya agar berubah warna kerena element a atau teks yg terbungkus div tidak berubah warna.
@@ -37,7 +41,7 @@ if (currentHour >= 5 && currentHour < 12) {
     title.innerHTML = `
     <h2>Hai selamat siang</h2>
     `;
-  } else if (currentHour >= 15 && currentHour < 18) {
+  } else if (currentHour >= 15 && currentHour < 19) {
     title.innerHTML = `
     <h2>Hai selamat sore</h2>
     `;
@@ -51,3 +55,4 @@ if (currentHour >= 5 && currentHour < 12) {
         // Setelah website selesai dimuat, hapus kelas "fadeIn"
        body.classList.remove('fadeIn');
     });
+    
